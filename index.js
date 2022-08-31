@@ -214,4 +214,8 @@ const otraFAF = (a,b) => {
   return a + b
 }
 const r = otraFAF(1 ,2)
-console.log(r);
+// console.log(r);
+
+sumar(2,3,function(r) {
+console.log("soy una funcion anonima y mi resultado es ",r)
+})
