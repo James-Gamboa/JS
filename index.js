@@ -67,17 +67,17 @@ arrVacio.push(miprimeraVariable)
 
 console.log(arrVacio);
 
-const suma = 1 + 2
-const restar = 1 -2
-const multiplicar = 2 * 3
-const division = 9 /3 
+// const suma = 1 + 2
+// const restar = 1 -2
+// const multiplicar = 2 * 3
+// const division = 9 /3 
 
-console.log(suma , restar , multiplicar , division);
+// console.log(suma , restar , multiplicar , division);
 
-const modulo = 10 % 3
-console.log(modulo);
+// const modulo = 10 % 3
+// console.log(modulo);
 
-let  num = 5
+// let  num = 5
 // cons vs let
 // num++
 // num++
@@ -91,11 +91,11 @@ let  num = 5
 // num--
 // num--
 
-num += 5
-num -= 5
-num *= 5
-num /= 2
-console.log(num);
+// num += 5
+// num -= 5
+// num *= 5
+// num /= 2
+// console.log(num);
 
 // operadores comparacion 
 
@@ -168,12 +168,50 @@ console.log("chanchito triste :(")
   }
 
   //ciclo for
-  const numeros = [1,2,3,4,5]
+  //const numeros = [1,2,3,4,5]
 
 // console.log(numeros[0]);
 
-for (let i = 0; i < numeros.length; i++){
-  console.log(i);
+//for (let i = 0; i < numeros.length; i++){
+ // console.log(i);
+//}
+
+
+// function iterar(arg1){
+
+// for (let i = 0; i < arg1.length; i++){
+//   console.log(arg1[i]);
+// }
+// }
+// // @ts-ignore
+// const numeros = [1,2,'Hola',4,5]
+// const nombres= ['Pedro','Juan','Felipe','Chanchito Feliz','Chanchito triste']
+// iterar(numeros)
+// iterar(nombres)
+
+// function suma(a,b){
+// return a+b;
+// }
+
+// const resultadosuma1 = suma(1,2)
+// const resultadosuma2 = suma(5,6)
+// const resultadosuma3 = suma(resultadosuma1,resultadosuma2)
+// console.log("resultado",resultadosuma3);
+
+function sumar (a,b,cb){
+  const r = a +b
+  cb(r)
 }
+function callback(result){
+  console.log("resultado",result);
+}
+//callback(6)
+//sumar (2,3,callback);
 
-
+// fat arrow functions
+const miFatArrowFunction = (a,b) => a + b
+const otraFAF = (a,b) => {
+  return a + b
+}
+const r = otraFAF(1 ,2)
+console.log(r);
