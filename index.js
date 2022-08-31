@@ -146,4 +146,34 @@ while (x < 5){
   x++
 }
 
-console.log("terminando el loop")
+console.log("terminando el loop");
+
+// control de flujo - switch
+let y = 3;
+switch(y){
+  case 1:{
+    console.log("yo soy el caso 1")
+    break
+  }
+  case 2:{
+    console.log("chanchito feliz")
+    break
+  }
+  case 3:
+console.log("chanchito triste :(")
+  break
+  default:
+    console.log("no hay chanchitos! :(")
+    break
+  }
+
+  //ciclo for
+  const numeros = [1,2,3,4,5]
+
+// console.log(numeros[0]);
+
+for (let i = 0; i < numeros.length; i++){
+  console.log(i);
+}
+
+
