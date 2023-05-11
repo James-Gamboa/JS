@@ -219,3 +219,43 @@ const r = otraFAF(1 ,2)
 sumar(2,3,function(r) {
 console.log("soy una funcion anonima y mi resultado es ",r)
 })
+
+// En un módulo llamado "miModulo.js"
+// Se define una variable constante llamada "miVariable" con el valor "Hola mundo"
+// Se define una función llamada "miFuncion" que imprime en la consola "Soy una función"
+export const miVariable = "Hola mundo";
+
+export function miFuncion() {
+console.log("Soy una función");
+}
+
+// En otro módulo
+// Se importa la variable "miVariable" y la función "miFuncion" desde el módulo "./miModulo.js"
+// Se imprime en la consola el valor de "miVariable", que es "Hola mundo"
+// Se llama a la función "miFuncion", que imprime en la consola "Soy una función"
+import { miVariable, miFuncion } from './miModulo.js';
+
+console.log(miVariable); // Hola mundo
+miFuncion(); // Soy una función
+
+// En un módulo llamado "miModulo.js"
+// Se define una variable constante llamada "miVariable" con el valor "Hola mundo"
+// Se define una función llamada "miFuncion" que imprime en la consola "Soy una función"
+// Se exporta "miVariable" con el alias "miVar" y "miFuncion" con el alias "miFunc"
+const miVariable = "Hola mundo";
+
+function miFuncion() {
+console.log("Soy una función");
+}
+
+export { miVariable as miVar, miFuncion as miFunc };
+
+// En otro módulo
+// Se importa la variable "miVar" y la función "miFunc" desde el módulo "./miModulo.js"
+// Se imprime en la consola el valor de "miVar", que es "Hola mundo"
+// Se llama a la función "miFunc", que imprime en la consola "Soy una función"
+import { miVar, miFunc } from './miModulo.js';
+
+console.log(miVar); // Hola mundo
+miFunc(); // Soy una función
+
